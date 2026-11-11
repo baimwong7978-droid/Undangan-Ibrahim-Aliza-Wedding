@@ -1,0 +1,226 @@
+/* ==========================================
+   1. GLOBAL & VARIABLES
+   ========================================== */
+:root {
+  --primary: #c5a880;
+  --primary-dark: #a3845b;
+  --secondary: #2c302e;
+  --bg-light: #faf8f5;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --text-dark: #2b2b2b;
+  --text-muted: #6c757d;
+  --font-serif: 'Playfair Display', serif;
+  --font-cursive: 'Great Vibes', cursive;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-serif);
+}
+
+.font-cursive {
+  font-family: var(--font-cursive);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* ==========================================
+   2. HERO COVER SECTION
+   ========================================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+              url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  z-index: 1050;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  max-width: 650px;
+  width: 90%;
+}
+
+.hero h4 {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e2d1c3;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-family: var(--font-cursive);
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero-subtext {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.btn-open-invitation {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.4);
+}
+
+.btn-open-invitation:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 168, 128, 0.6);
+}
+
+/* ==========================================
+   3. COUNTDOWN TIMER
+   ========================================== */
+.simply-countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 1.5rem 0;
+}
+
+.simply-countdown > div {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 14px;
+  border-radius: 12px;
+  min-width: 70px;
+  text-align: center;
+}
+
+.simply-countdown .simply-amount {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: var(--font-serif);
+  color: #fff;
+}
+
+.simply-countdown .simply-word {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e2d1c3;
+}
+
+/* ==========================================
+   4. NAVBAR
+   ========================================== */
+.mynavbar {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-family: var(--font-cursive);
+  font-size: 1.8rem;
+  color: var(--primary-dark) !important;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary) !important;
+}
+
+/* ==========================================
+   5. SECTIONS GENERAL
+   ========================================== */
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.section-tag {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: var(--primary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+/* ==========================================
+   6. COUPLE SECTION
+   ========================================== */
+.couple-frame {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
